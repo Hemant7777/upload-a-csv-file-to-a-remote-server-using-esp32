@@ -9,7 +9,7 @@ File myFile;
 String post_host = "My.site.in";
 const int  post_port  = 80;
 String  url = "/upload_file.php";
-char server[] ="My>site.in";
+char server[] ="My.site.in";
 const char* ssid4     = "MY-ssid";         // The SSID (name) of the Wi-Fi network you want to connect to
 const char* password4 ="My-passwoed";
 // Emulate Serial1 on pins 6/7 if not present
