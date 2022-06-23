@@ -6,12 +6,12 @@
 
 File myFile;
 
-String post_host = "data.solarbees.in";
+String post_host = "My.site.in";
 const int  post_port  = 80;
 String  url = "/upload_file.php";
-char server[] ="data.solarbees.in";
-const char* ssid4     = "Novel_Wi-Fi_POC";         // The SSID (name) of the Wi-Fi network you want to connect to
-const char* password4 ="Novel#123";
+char server[] ="My>site.in";
+const char* ssid4     = "MY-ssid";         // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password4 ="My-passwoed";
 // Emulate Serial1 on pins 6/7 if not present
 #if defined(ARDUINO_ARCH_AVR) && !defined(HAVE_HWSERIAL1)
 //#include <SoftwareSerial.h>
@@ -107,10 +107,10 @@ void setup() {
     String hostString = String(post_host);
 
 
-   // String requestHead = "--RandomNerdTutorials\r\nContent-Disposition: form-data; name=\"data\"; filename=\"data.wav\"\r\nContent-Type: audio/x-wav\r\n\r\n";//S100kb.csv
-     String requestHead = "--RandomNerdTutorials\r\nContent-Disposition: form-data; name=\"data\"; filename=\"S556kb.csv\"\r\nContent-Type: text/csv\r\n\r\n";
+ csv
+     String requestHead = "--KeepSending\r\nContent-Disposition: form-data; name=\"data\"; filename=\"S556kb.csv\"\r\nContent-Type: text/csv\r\n\r\n";
 
-    String tail = "\r\n--RandomNerdTutorials--\r\n";
+    String tail = "\r\n--KeepSending--\r\n";
 
 
     int contentLength =  requestHead.length() + myFile.size() + tail.length();
@@ -120,7 +120,7 @@ void setup() {
     client.println("POST " + url + " HTTP/1.1");
     client.println("Host: " + post_host);
     client.println("Content-Length: " + String(contentLength, DEC));
-    client.println("Content-Type: multipart/form-data; boundary=RandomNerdTutorials");
+    client.println("Content-Type: multipart/form-data; boundary=KeepSending");
     client.println();
     client.print(requestHead );
 
