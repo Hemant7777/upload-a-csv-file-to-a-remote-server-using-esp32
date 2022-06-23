@@ -3,3 +3,9 @@ this code file help us to upload a .csv (multipart DATA) data file on a remote s
 By the using of this code you can be  succesfully upload a file( i was test with pdf, wav, csv)
 you can also increase the file size with help of increas in buffer size
 the file is send to server with the help of php script
+
+
+
+
+Future Accepect:--- 
+File upload using gsm module
